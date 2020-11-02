@@ -1,8 +1,43 @@
-h2{
-    color: #a52a2a;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*
+h1, h2{
+    font-family: Fuente de Marca, sans-serif;
+}
+*/
+
+.font-h4{
+    font-size: 100%;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.nav{
+    list-style: inside none;
+}
+
+a{
+    text-decoration: none;
 }
 
 footer{
     background-color: #000000;
     color: #ffffff;
+    font-size: 80%;
+    font-weight: 200;
 }
+
+.logo{
+    width: 112px;
+}
+
+.centrado{
+    text-align: center;
+}
+
