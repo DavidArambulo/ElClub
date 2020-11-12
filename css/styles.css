@@ -10,6 +10,28 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #bd6dff;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li{
+    list-style: none;
+}
+
+i span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
 /*
 h1, h2{
     font-family: Fuente de Marca, sans-serif;
@@ -17,8 +39,33 @@ h1, h2{
 */
 
 /******** estilos generales utiles ********/
+.font-h1{
+    font-size: 2em;
+}
+.font-h2{
+    font-size: 1.5em;
+}
+.font-h3{
+    font-size: 1.17em;
+}
 .font-h4{
-    font-size: 100%;
+    font-size: 1em;
+}
+.font-h5{
+    font-size: 0.83em;
+}
+.font-h6{
+    font-size: 0.67em;
+}
+
+.no-display{
+    display: unset;
+}
+
+.conteiner{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .italic{
@@ -29,84 +76,123 @@ h1, h2{
     text-align: center;
 }
 
-.block{
-    display: block;
+
+/******** NAVEGACION ********/
+.logo{
+    width: 5rem;
 }
 
-.inline-block{
-    display: inline-block;
+.media{
+    font-size: 3rem;
 }
 
-.encuadre{
-    border: #000000 0.15rem solid;
+
+header{
+    position: sticky;
+    top: 0px;
+    background-color: #ffffff;
 }
 
-/******** estilos para la navegacion ********/
-.nav{
-    list-style: inside none;
-    display: inline-block;
-}
-
-.nav li{
-    display: inline-block;
+nav{
+    display: flex;
     text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
-a{
-    text-decoration: none;
-    color: #000000;
-}
-a:hover{
-    color: #bd6dff;
+nav ul{
+    align-items: center;
 }
 
-/******** estilos para partes especificas ********/
+nav ul li{
+    margin-left: 0.75rem;
+}
 
+
+/******** FOOTER ********/
 footer, footer a{
     background-color: #000000;
     color: #ffffff;
     font-size: 0.75rem;
     font-weight: 200;
 }
-
-.logo{
-    width: 7rem;
+footer div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-section{
-    margin: 3rem;
+
+/******** HOME ********/
+/*-------
+aca se pondran los estilos especificos de la pagina de home
+(seguramente solo esten los del carrusel de fotos)
+-------*/
+
+
+/******** NOTICIAS ********/
+.encuadre{
+    border: #000000 0.15rem solid;
 }
 
-/******** estilos para noticias ********/
-.noticias article{
-    margin: 1rem 0rem;
+.noticias li{
     border: 0.02rem solid transparent;
-    display: inline-block;
+    margin-right: 1rem;
 }
 
-.noticias article:hover{
+.noticias .recientes{
+    justify-content: space-around;
+}
+
+.noticias li:hover{
     border: 0.02rem solid #bd6dff;
 }
 
-/******** estilos para Staff ********/
-.staff article{
+
+/******** STAFF ********/
+/*-------aplicar grid a las targetas de profesor-------*/
+.staff ul{
+    justify-content: space-between;
+}
+
+.staff .article{
     margin: 1.5rem 0rem;
     box-shadow: 0.35rem 0.35rem 0.6rem rgba(0, 0, 0, 0.45);
-    display: inline-block;
+    display: flex;
     width: 45%;
 }
-article ul{
-    list-style: none;
+
+.staff h6{
+    font-weight: 400;
+    text-decoration: underline;
 }
 
-.staff article div{
+.article i{
+    font-size: 2rem;
+}
+
+/******** ESTUDIO ********/
+/*-------aplicar grid a la galeria revisar tamaño de las imagenes-------*/
+.estudio div{
+    width: 50%;
     display: inline-block;
-    width: 30%;
-    vertical-align: top;
+}
+.estudio h1{
+    margin: 0rem;
 }
 
-/******** estilos para contacto ********/
+.estudio h3{
+    margin: 3rem 0rem 2rem 0rem;
+}
+
+.imagen1{
+    width: 100%;
+}
+
+
+/******** CONTACTO ********/
+/*-------aplicar grid a esta pagina-------*/
 .contacto div{
     display: inline-block;
     width: 45%;
@@ -114,12 +200,28 @@ article ul{
     vertical-align: top;
 }
 
-/******** estilos para estudio ********/
-.estudio div{
-    width: 50%;
-    display: inline-block;
+
+/******** SIGUENOS ********/
+.siguenos{
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    width: auto;
+}
+.siguenos a{
+    font-size: 3rem;
+    display: block;
+    text-align: center;
 }
 
-.imagen1{
-    width: 100%;
+
+/*
+-------de momento no son necesarias-------
+.block{
+    display: block;
 }
+
+.inline-block{
+    display: inline-block;
+}
+*/
