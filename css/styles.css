@@ -31,6 +31,9 @@ i span{
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
 }
+p{
+    margin-bottom: 0.5rem;
+}
 
 /*
 h1, h2{
@@ -40,22 +43,22 @@ h1, h2{
 
 /******** estilos generales utiles ********/
 .font-h1{
-    font-size: 2em;
+    font-size: 2rem;
 }
 .font-h2{
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 .font-h3{
-    font-size: 1.17em;
+    font-size: 1.17rem;
 }
 .font-h4{
-    font-size: 1em;
+    font-size: 1rem;
 }
 .font-h5{
-    font-size: 0.83em;
+    font-size: 0.83rem;
 }
 .font-h6{
-    font-size: 0.67em;
+    font-size: 0.67rem;
 }
 
 .no-display{
@@ -84,8 +87,8 @@ h1, h2{
 
 .media{
     font-size: 3rem;
+    display: none;
 }
-
 
 header{
     position: sticky;
@@ -112,12 +115,19 @@ nav ul li{
 
 /******** FOOTER ********/
 /*-------tengo que corregir que no esta "pegado" al fondo de la pagina------*/
-footer, footer a{
+footer{
     background-color: #000000;
     color: #ffffff;
-    font-size: 0.75rem;
     font-weight: 200;
+    font-size: 0.75rem;
 }
+
+footer .media{
+    font-size: 3rem;
+    background-color: #000000;
+    color: #ffffff;
+}
+
 footer div{
     display: flex;
     justify-content: space-between;
@@ -139,11 +149,18 @@ aca se pondran los estilos especificos de la pagina de home
 
 .noticias li{
     border: 0.02rem solid transparent;
-    margin-right: 1rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
-.noticias .recientes{
+.noticias img, .noticias h3{
+    width: 100%;
+}
+
+.noticias{
     justify-content: space-around;
+    margin-bottom: 1rem;
 }
 
 .noticias li:hover{
@@ -154,19 +171,57 @@ aca se pondran los estilos especificos de la pagina de home
 /******** STAFF ********/
 /*-------aplicar grid a las targetas de profesor-------*/
 .staff ul{
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    flex-direction: column;
 }
 
 .staff .article{
     margin: 1.5rem 0rem;
     box-shadow: 0.35rem 0.35rem 0.6rem rgba(0, 0, 0, 0.45);
-    display: flex;
-    width: 45%;
 }
 
-.staff h6{
+.staff .article img{
+    width: 100%;
+}
+/*
+<div>
+    <h4 class="font-h3">Nombre</h4>
+    <h5 class="font-h4">Cargo</h5>
+    <p>Estilo de danza</p>
+    <a href="https://www.instagram.com/mariojuangorena/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+*/
+
+.staff .article div{
+    display: grid;
+    grid-template-columns: 1fr 2rem;
+    grid-template-rows: repeat(10,auto);
+}
+
+.staff .nombre{
+    grid-column: 1/3;
+}
+
+.staff .estilo{
+    grid-column: 1/3;
+}
+.staff .nivel{
+    grid-column: 1/3;
+}
+
+.staff .horarios{
     font-weight: 400;
     text-decoration: underline;
+    grid-column: 1;
+}
+.staff .instagram{
+    grid-column: 2;
+    display: inline-block;
+    margin: auto;
+}
+
+.staff i{
+    grid-area: instagram;
 }
 
 .article i{
@@ -175,19 +230,40 @@ aca se pondran los estilos especificos de la pagina de home
 
 /******** ESTUDIO ********/
 /*-------aplicar grid a la galeria revisar tamaño de las imagenes-------*/
-.estudio div{
-    width: 50%;
-    display: inline-block;
+.estudio article{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: 
+        "titulo titulo"
+        "imagen1 imagen1"
+        "imagen2 imagen4"
+        "imagen3 imagen4";
+}
+.estudio h3{
+    grid-area: titulo;
+}
+.estudio .imagen1{
+    grid-area: imagen1;
+}
+.estudio .imagen2{
+    grid-area: imagen2;
+}
+.estudio .imagen3{
+    grid-area: imagen3;
+}
+.estudio .imagen4{
+    grid-area: imagen4;
 }
 .estudio h1{
     margin: 0rem;
 }
 
-.estudio h3{
+/*.estudio h3{
     margin: 3rem 0rem 2rem 0rem;
-}
+}*/
 
-.imagen1{
+.imagen1,.imagen2,.imagen3,.imagen4{
     width: 100%;
 }
 
@@ -215,6 +291,15 @@ aca se pondran los estilos especificos de la pagina de home
     text-align: center;
 }
 
+/******** ESTILOS PARA TABLETS ********/
+@media only screen and (min-width: 600px){
+
+}
+
+/******** ESTILOS PARA DESKTOP (O TABLETS GRANDES EN HORIZONTAL) ********/
+@media only screen and (min-width: 1024px){
+    
+}
 
 /*
 -------de momento no son necesarias-------
