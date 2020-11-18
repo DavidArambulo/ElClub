@@ -81,15 +81,11 @@ h1, h2{
     width: 5rem;
 }
 
-.media{
-    font-size: 3rem;
-    display: none;
-}
-
 header{
     position: sticky;
     top: 0px;
     background-color: #000000;
+    z-index: 1;
 }
 
 header a{
@@ -97,6 +93,7 @@ header a{
     top: 0px;
     background-color: #000000;
     color: #ffffff;
+    font-weight: 700;
 }
 
 nav{
@@ -111,8 +108,13 @@ nav ul{
     align-items: center;
 }
 
-nav ul li{
+nav li{
     margin-left: 0.75rem;
+    transition: transform 0.1s;
+}
+
+nav li:hover{
+    transform: scale(1.15);
 }
 
 
@@ -123,6 +125,16 @@ footer{
     color: #000000;
     font-weight: 400;
     font-size: 0.75rem;
+}
+
+
+.media{
+    font-size: 3rem;
+    display: none;
+}
+
+.media:hover{
+    color: #bd6dff;
 }
 
 footer .media{
@@ -156,6 +168,7 @@ aca se pondran los estilos especificos de la pagina de home
     margin-bottom: 1rem;
     width: 100%;
     box-shadow: 0.4rem 0.25rem 1rem rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
 }
 
 .noticias img, .noticias h3{
@@ -169,6 +182,11 @@ aca se pondran los estilos especificos de la pagina de home
 
 .noticias li:hover{
     border: 0.02rem solid #bd6dff;
+    transform: scale(1.05);
+}
+
+.noticias p a{
+    margin-bottom: 1px;
 }
 
 .noticia4{
@@ -177,7 +195,6 @@ aca se pondran los estilos especificos de la pagina de home
 
 
 /******** STAFF ********/
-/*-------aplicar grid a las targetas de profesor-------*/
 .staff ul{
     /*justify-content: space-between;*/
     flex-direction: column;
@@ -227,6 +244,12 @@ aca se pondran los estilos especificos de la pagina de home
     margin: auto;
 }
 
+.staff .instagram:hover{
+    animation-name: agitar;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+}
+
 .staff i{
     grid-area: instagram;
 }
@@ -272,7 +295,6 @@ aca se pondran los estilos especificos de la pagina de home
 
 
 /******** CONTACTO ********/
-/*-------aplicar grid a esta pagina-------*/
 /*.contacto div{
     width: 100%;
     margin-right: 0rem;
@@ -352,21 +374,67 @@ form{
     position: fixed;
     bottom: 8rem;
     right: 0rem;
-    width: auto;
-    padding-left: 0.1rem;
+    width: 200px;
     background-color: #000000;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    display: flex;
+    align-items: center;
+    transform: translateX(160px);
+    animation-name: seguinos;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    z-index: 1;
 }
-.siguenos a{
-    font-size: 2rem;
-    display: block;
-    text-align: center;
+
+.siguenos ul{
+    padding-left: 0.2rem;
+    flex-direction: column;
+}
+
+.siguenos li{
+    width: 40px;
+}
+
+.siguenos p{
+    text-transform: uppercase;
+    font-size: 1.15rem;
     color: #ffffff;
 }
-.siguenos a:hover{
+
+.siguenos a{
     text-align: center;
+    font-size: 2rem;
+    display: block;
+    color: #ffffff;
+}
+
+.siguenos a:hover{
     color: #bd6dff;
+}
+
+@keyframes seguinos{
+    0%{
+        transform: translateX(160px);
+    }
+    35%{
+        transform: translateX(0px);
+    }
+    65%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(160px);
+    }
+}
+
+@keyframes agitar{
+    25%{
+        transform: rotate(45deg);
+    }
+    75%{
+        transform: rotate(-45deg);
+    }
 }
 
 /******** ESTILOS PARA TABLETS ********/
@@ -407,10 +475,20 @@ form{
     .contacto fieldset .inputAS{
         grid-column: 2;
     }
+    /******** SIGUENOS ********/
+    .siguenos{
+        bottom: unset;
+        top: 15rem;
+        right: 0rem;
+    }
 }
 
 /******** ESTILOS PARA DESKTOP (O TABLETS GRANDES EN HORIZONTAL) ********/
 @media only screen and (min-width: 1024px){
+    /******** FOOTER ********/
+    .media{
+        display: inline-block;
+    }
     /******** NOTICIAS ********/
     .noticias li{
         width: 20%;
@@ -435,18 +513,17 @@ form{
     .contacto{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,auto);
+        grid-template-rows: repeat(3,auto);
         grid-template-areas:
             "titulo titulo"
             "formulario mapa"
-            "escribenos escribenos";
+            "escribenos mapa";
     }
     .contacto h2{
         grid-area: titulo;
     }
     .contacto form{
         grid-area: formulario;
-        margin: auto;
         margin-left: 0rem;
         margin-right: 1.5rem;
     }
