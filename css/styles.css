@@ -164,10 +164,13 @@ footer div{
 aca se pondran los estilos especificos de la pagina de home
 (seguramente solo esten los del carrusel de fotos)
 -------*/
+.carrusel li img{
+    width: 100%;
+}
 
 
 /******** NOTICIAS ********/
-.noticias {
+.noticias {/*Chequear sacar el margen para los titulos de las noticias*/
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -259,7 +262,7 @@ aca se pondran los estilos especificos de la pagina de home
 
 .staff .instagram:hover{
     animation-name: agitar;
-    animation-duration: 0.25s;
+    animation-duration: 0.2s;
     animation-timing-function: linear;
 }
 
@@ -319,14 +322,19 @@ aca se pondran los estilos especificos de la pagina de home
 
 
 /******** CONTACTO ********/
-.contacto iframe{
+.contacto iframe{/*Corregir icono de instagram*/
     width: 100%;
     /*margin-bottom: 1rem;*/
 }
 
 .contacto .instagram{
     display: flex;
+    align-items: center;
     /*margin-bottom: 1rem;*/
+}
+
+.contacto .instagram p{
+    margin: 0rem;
 }
 
 /*form{
