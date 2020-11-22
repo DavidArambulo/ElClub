@@ -2,12 +2,14 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/styles.css">
         <script src="https://kit.fontawesome.com/965dd3e5aa.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/bootstrap-a-usar.css">
+        <link rel="stylesheet" href="../css/styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contacto - El Club</title>
     </head>
     <body>
+        <!--HTML DEL HEADER SIN MODIFICACIONES POR BOOTSTRAP
         <header>
             <nav class="conteiner">
                 <a href="../index.html"><img src="../images/logo-elclub-blanco.png" class="logo" alt="Logo"></a>
@@ -20,6 +22,35 @@
                 </ul>
             </nav>
         </header>
+        -->
+        <header class="bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark conteiner">
+                <a class="navbar-brand" href="../index.html"><img src="../images/logo-elclub-blanco.png" class="logo" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="noticias.html">Noticias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="staff.html">Staff</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="estudio.html">Estudio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contacto <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
         <section class="siguenos">
             <ul>
                 <li><a href="https://www.instagram.com/elclub_dedanza/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a></li>

@@ -83,6 +83,26 @@ h6, .font-h6{
     text-align: center;
 }
 
+/******** BOOTSTRAP CORRECCIONES ********/
+.bg-dark{
+    background-color: #000000 !important;
+}
+
+.navbar{
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.carousel{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
 
 /******** NAVEGACION ********/
 .logo{
@@ -93,7 +113,7 @@ header{
     position: sticky;
     top: 0px;
     background-color: #000000;
-    z-index: 1;
+    z-index: 16; /*ESTE NUMERO ES ASI PORQUE LOS INDICADORES DE BOOSTRAP TIENEN Z-INDEX 15*/
     margin-bottom: 2rem;
 }
 
@@ -174,6 +194,11 @@ aca se pondran los estilos especificos de la pagina de home
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
+
+.noticias h3{
+    margin-top: 0px;
+}
+
 .encuadre{
     border: #000000 0.15rem solid;
 }
@@ -316,13 +341,65 @@ aca se pondran los estilos especificos de la pagina de home
     margin: 0rem;
 }
 
-.imagen1,.imagen2,.imagen3,.imagen4{
+.estudio .imagen1, .estudio .imagen1 img, .estudio .imagen2, .estudio .imagen2 img,
+.imagen3 .estudio, .estudio .imagen3 img, .estudio .imagen4, .estudio .imagen4 img{
     width: 100%;
 }
 
+.modal-estudio{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    z-index: 2;
+}
+
+#sala1-imagen1:target, #sala1-imagen2:target, #sala1-imagen3:target, #sala1-imagen4:target,
+#sala2-imagen1:target, #sala2-imagen2:target, #sala2-imagen3:target, #sala2-imagen4:target,
+#sala3-imagen1:target, #sala3-imagen2:target, #sala3-imagen3:target, #sala3-imagen4:target,
+#sala4-imagen1:target, #sala4-imagen2:target, #sala4-imagen3:target, #sala4-imagen4:target{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2rem 1fr;
+    grid-template-areas: 
+        "nada imagen cerrar"
+        "atras imagen siguiente";
+}
+.close, .previo, .siguiente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaaaaa;
+    font-size: 1.5rem;
+}
+.close{
+    grid-area: cerrar;
+}
+.previo{
+    grid-area: atras;
+}
+.modal img{
+    grid-area: imagen;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+}
+.siguiente{
+    grid-area: siguiente;
+}
 
 /******** CONTACTO ********/
-.contacto iframe{/*Corregir icono de instagram*/
+.contacto iframe{
     width: 100%;
     /*margin-bottom: 1rem;*/
 }
