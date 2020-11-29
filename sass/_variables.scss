@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+$colorPrincipal: #000;
+$colorSecundario: #fff;
+$colorBase: #fff;
+$colorTexto: #000;
+$colorHoverLinks: #bd6dff;
+$colorFondoModal: rgba(0, 0, 0, 0.85);
+$boxShadow: 0.4rem 0.25rem 1rem rgba(0, 0, 0, 0.3);
+
+$fuenteGeneral: 'Montserrat', sans-serif;
+$fuenteGeneralBold: 700;
+$fuenteGeneralRegular: 400;
+$fuenteGeneralThin: 200;
+
+//$fuenteTitulos:;
+
+$espaciadoLetras: 0.005rem;
+$espaciadoPalabras: 0.1rem;
+
+$tamanoTextoBase: 1.2rem;
+$tamanoTextoSiguenos: 1.2rem;
+$tamanoTextoFooter: 0.75rem;
+$tamanoLogo: 5rem;
+$tamanoIconoMedia: 3rem;
+$tamanoIconoStaff: 2rem;
+$tamanoIconoSiguenos: 2rem;
+
+$margenSecciones: 2rem;
+$margenStaff: 1.5rem;
+$margenArticulo: 1rem;
+$margenNoticias: 1rem;
+$margenTitulos: 1rem;
+$margenLinksNav: 0.75rem;
+$margenParrafos: 0.7rem;
+$margenStaffHorarios: 0.5rem;
+$margenStaffNombre: 0.25rem;
+$gapContacto: 1rem;
+
+$encuadre: $colorPrincipal 0.15rem solid;
+$bordeNoticas: 0.02rem solid transparent;
+$bordeNoticasHover: 0.02rem solid $colorHoverLinks;

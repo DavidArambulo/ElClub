@@ -1,0 +1,88 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $fuenteGeneral;
+    letter-spacing: $espaciadoLetras;
+    word-spacing: $espaciadoPalabras;
+    color: $colorTexto;
+}
+
+a{
+    text-decoration: none;
+    color: $colorTexto;
+}
+a:hover{
+    color: $colorHoverLinks;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    font-size: $tamanoTextoBase;
+    margin-bottom: $margenParrafos;
+    margin-top: $margenParrafos;
+}
+
+h1, h2, h3 {
+    margin-top: $margenTitulos;
+    margin-bottom: $margenTitulos;
+}
+
+/*
+h1, h2{
+    font-family: $fuenteTitulos;
+}
+*/
+
+/******** estilos generales utiles ********/
+h1, .font-h1{
+    font-size: $tamanoTextoBase + 1rem;
+}
+h2, .font-h2{
+    font-size: $tamanoTextoBase + 0.5rem;
+}
+h3, .font-h3{
+    font-size: $tamanoTextoBase + 0.17rem;
+}
+h4, .font-h4{
+    font-size: $tamanoTextoBase;
+}
+h5, .font-h5{
+    font-size: $tamanoTextoBase - 0.17rem;
+}
+h6, .font-h6{
+    font-size: $tamanoTextoBase - 0.33rem;
+}
+
+.no-display{
+    display: unset;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.encuadre{
+    border: $encuadre;
+}

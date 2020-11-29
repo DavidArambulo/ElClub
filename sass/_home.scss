@@ -1,0 +1,17 @@
+/******** HOME ********/
+.carousel{
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: $margenSecciones;
+    .carousel-indicators li {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+    }
+    .carousel-inner{
+        width: 100%;
+        li img{
+            width: 100%;
+        }        
+    }
+}
