@@ -46,12 +46,13 @@
                     margin: auto;
                     i{
                         font-size: $tamanoIconoStaff;
+                        background-color: transparent;
                     }
-                }
-                &:hover{
-                    animation-name: agitar;
-                    animation-duration: 0.2s;
-                    animation-timing-function: linear;
+                    &:hover{
+                        animation-name: agitar;
+                        animation-duration: 0.2s;
+                        animation-timing-function: linear;
+                    }
                 }
             }
             @media only screen and (min-width: 600px){

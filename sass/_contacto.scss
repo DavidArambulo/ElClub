@@ -1,84 +1,69 @@
 /******** CONTACTO ********/
-.contacto iframe{
-    width: 100%;
-}
-
-.contacto .instagram{
-    display: flex;
-    align-items: center;
-}
-
-.contacto .instagram p{
-    margin: 0rem;
-}
-
-.contacto fieldset{
-    display: grid;
-    grid-template-columns: 5rem 1fr;
-    grid-template-rows: repeat(6,auto);
-    font-weight: $fuenteGeneralBold;
-    padding: 1rem;
-    border: 0px;
-    box-shadow: $boxShadow;
-    gap: 0.5rem;
-}
-
-.contacto fieldset .nombre{
-    grid-column: 1;
-}
-
-.contacto fieldset .inputN{
-    grid-column: 2;
-}
-
-.contacto fieldset .apellido{
-    grid-column: 1;
-}
-
-.contacto fieldset .inputA{
-    grid-column: 2;
-}
-
-.contacto fieldset .email{
-    grid-column: 1;
-}
-
-.contacto fieldset .inputE{
-    grid-column: 2;
-}
-
-.contacto fieldset .asunto{
-    grid-column: 1/3;
-}
-
-.contacto fieldset .inputAS{
-    grid-column: 1/3;
-}
-
-.contacto fieldset .comentarios{
-    grid-column: 1/3;
-}
-
-.contacto fieldset .submit{
-    grid-column: 1;
-}
-
-/******** ESTILOS PARA TABLETS ********/
-@media only screen and (min-width: 600px){
-    /******** CONTACTO ********/
-    .contacto fieldset .asunto{
-        grid-column: 1;
+.contacto{
+    form{
+        fieldset{
+            display: grid;
+            grid-template-columns: 5rem 1fr;
+            grid-template-rows: repeat(6,auto);
+            font-weight: $fuenteGeneralBold;
+            padding: 1rem;
+            border: 0px;
+            box-shadow: $boxShadow;
+            gap: 0.5rem;
+            .nombre{
+                grid-column: 1;
+            }
+            .inputN{
+                grid-column: 2;
+            }
+            .apellido{
+                grid-column: 1;
+            }
+            .inputA{
+                grid-column: 2;
+            }
+            .email{
+                grid-column: 1;
+            }
+            .inputE{
+                grid-column: 2;
+            }
+            .asunto{
+                grid-column: 1/3;
+                @media only screen and (min-width: 600px){
+                    grid-column: 1;
+                }
+            }
+            .inputAS{
+                grid-column: 1/3;
+                @media only screen and (min-width: 600px){
+                    grid-column: 2;
+                }
+            }
+            .comentarios{
+                grid-column: 1/3;
+            }
+            .submit{
+                grid-column: 1;
+            }
+        }
     }
-    
-    .contacto fieldset .inputAS{
-        grid-column: 2;
+    .instagram{
+        display: flex;
+        align-items: center;
+        div{
+            p{
+                margin: 0rem;
+            }
+        }
+        .media{
+            font-size: $tamanoIconoMedia;
+        }
     }
-}
-
-/******** ESTILOS PARA DESKTOP (O TABLETS GRANDES EN HORIZONTAL) ********/
-@media only screen and (min-width: 1024px){
-    /******** CONTACTO ********/
-    .contacto{
+    iframe{
+        width: 100%;
+    }
+    @media only screen and (min-width: 1024px){
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(3,auto);
@@ -87,17 +72,17 @@
             "formulario mapa"
             "escribenos mapa";
         gap: $gapContacto;
-    }
-    .contacto h2{
-        grid-area: titulo;
-    }
-    .contacto form{
-        grid-area: formulario;
-    }
-    .contacto iframe{
-        grid-area: mapa;
-    }
-    .contacto .instagram{
-        grid-area: escribenos;
+        h2{
+            grid-area: titulo;
+        }
+        form{
+            grid-area: formulario;
+        }
+        .instagram{
+            grid-area: escribenos;
+        }
+        iframe{
+            grid-area: mapa;
+        }
     }
 }
