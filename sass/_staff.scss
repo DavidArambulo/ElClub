@@ -1,72 +1,96 @@
 /******** STAFF ********/
 .staff{
+    h2{
+        @extend %font-h1;
+    }
+    h3{
+        @extend %font-h2;
+    }
     ul{
-        /*justify-content: space-between;*/
         flex-direction: column;
         .article{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            margin: $margenStaff 0rem;
-            box-shadow: $boxShadow;
+            @include card(unset);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: 1fr auto auto;
+            grid-template-areas: 
+                "img img"
+                "data nada"
+                "data insta";
             img{
-                width: 100%;/*SE DEBE RE VER*/
+                width: 100%;
+                grid-area: img;
                 @media only screen and (min-width: 600px){
+                    width: 300px;
+                }
+                @media only screen and (min-width: 700px){
                     width: 400px;
                 }
-                @media only screen and (min-width: 1024px){
+                @media only screen and (min-width: 1078px){
                     width: 250px;
                 }
             }
             div{
-                width: 100%;
-                display: grid;
-                grid-template-columns: 1fr 2rem;
+                h4{
+                    @extend %font-h3;
+                }
+                h5, h6{
+                    @extend %font-h4;
+                }
+                grid-area: data;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                padding: 1.5rem;
+                padding-right: 0px;
                 .nombre{
-                    grid-column: 1/3;
-                    margin-bottom: $margenStaffNombre;
+                    margin-bottom: $margenStaff;
                 }
                 .estilo{
-                    grid-column: 1/3;
+                    margin-bottom: $margenStaff;
                 }
                 .nivel{
-                    grid-column: 1/3;
                     text-decoration: underline;
                     font-weight: $fuenteGeneralRegular;
                 }
                 .horarios{
                     font-weight: $fuenteGeneralRegular;
-                    grid-column: 1;
                     padding-left: 1rem;
                     margin-bottom: $margenStaffHorarios;
                 }
-                .instagram{
-                    grid-column: 2;
-                    display: inline-block;
-                    margin: auto;
-                    i{
-                        font-size: $tamanoIconoStaff;
-                        background-color: transparent;
+            }
+            .instagram{
+                grid-area: insta;
+                display: inline-block;
+                i{
+                    font-size: $tamanoIconoStaff;
+                    background-color: transparent;
+                    @media only screen and (min-width: 1078px){
+                        font-size: 2rem;
                     }
-                    &:hover{
-                        animation-name: agitar;
-                        animation-duration: 0.2s;
-                        animation-timing-function: linear;
-                    }
+                }
+                &:hover{
+                    animation-name: agitar;
+                    animation-duration: 0.2s;
+                    animation-timing-function: linear;
                 }
             }
             @media only screen and (min-width: 600px){
-                align-items: unset;
-                flex-direction: row;
+                grid-template-columns: auto 1fr auto;
+                grid-template-rows: 1fr auto;
+                grid-template-areas: 
+                    "img data nada"
+                    "img data insta";
             }
-            @media only screen and (min-width: 1024px){
+            @media only screen and (min-width: 1078px){
                 width: 49%;
             }
         }
         @media only screen and (min-width: 600px){
             flex-direction: column;
         }
-        @media only screen and (min-width: 1024px){
+        @media only screen and (min-width: 1078px){
             justify-content: space-between;
             flex-direction: row;
         }

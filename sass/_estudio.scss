@@ -7,47 +7,103 @@
         margin-top: 2rem;
         margin-bottom: 0.5rem;
     }
+    h2{
+        @extend %font-h1;
+    }
+    h3{
+        @extend %font-h2;
+    }
     article{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(4,auto);
-        grid-template-areas: 
-            "titulo titulo"
-            "imagen1 imagen1"
-            "imagen2 imagen4"
-            "imagen3 imagen4";
         margin-bottom: $margenArticulo;
         gap: 0.5rem;
-        h3{
-            grid-area: titulo;
+        .imagen1, .imagen2, .imagen3, .imagen4{
+            width: 100%;
+            img{
+                width: 100%;
+                &.img-md, &.img-lg{
+                    display: none;
+                }
+            }
         }
         .imagen1{
-            grid-area: imagen1;
-            width: 100%;
             img{
-                width: 100%;
+                @media only screen and (min-width: 600px){
+                    &.img-sm{
+                        display: none;
+                    }
+                    &.img-md{
+                        display: unset;
+                    }
+                }
+                @media only screen and (min-width: 900px){
+                    &.img-md{
+                        display: none;
+                    }
+                    &.img-lg{
+                        display: unset;
+                    }
+                }
             }
         }
-        .imagen2{
-            grid-area: imagen2;
-            width: 100%;
+        .imagen2, .imagen3, .imagen4{
             img{
-                width: 100%;
+                @media only screen and (min-width: 600px){
+                    &.img-sm{
+                        display: none;
+                    }
+                    &.img-md{
+                        display: unset;
+                    }
+                }
+                @media only screen and (min-width: 800px){
+                    &.img-md{
+                        display: none;
+                    }
+                    &.img-lg{
+                        display: unset;
+                    }
+                }
+                @media only screen and (min-width: 1024px){
+                    &.img-lg{
+                        display: none;
+                    }
+                    &.img-sm{
+                        display: unset;
+                    }
+                }
             }
         }
-        .imagen3{
-            grid-area: imagen3;
-            width: 100%;
-            img{
-                width: 100%;
+        @media only screen and (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(4,auto);
+            grid-template-areas: 
+                "titulo titulo"
+                "imagen1 imagen1"
+                "imagen2 imagen4"
+                "imagen3 imagen4";
+            h3{
+                grid-area: titulo;
             }
-        }
-        .imagen4{
-            grid-area: imagen4;
-            margin: auto;
-            width: 100%;
-            img{
-                width: 100%;
+            .imagen1{
+                grid-area: imagen1;
+            }
+            .imagen2{
+                grid-area: imagen2;
+            }
+            .imagen3{
+                grid-area: imagen3;
+            }
+            .imagen4{
+                grid-area: imagen4;
+                margin: auto;
+            }
+            &.invertido{
+                grid-template-areas: 
+                "titulo titulo"
+                "imagen1 imagen1"
+                "imagen4 imagen2"
+                "imagen4 imagen3";
             }
         }
     }
@@ -87,8 +143,55 @@
                 grid-area: imagen;
                 margin: auto;
                 width: 100%;
+                &.img-md, &.img-lg, &.img-xl{
+                    display: none;
+                }
                 &.imagen4{
                     max-width: 500px;
+                }
+                &.imagen1{
+                    @media only screen and (min-width: 600px){
+                        &.img-sm{
+                            display: none;
+                        }
+                        &.img-md{
+                            display: unset;
+                        }
+                    }
+                    @media only screen and (min-width: 900px){
+                        &.img-md{
+                            display: none;
+                        }
+                        &.img-lg{
+                            display: unset;
+                        }
+                    }
+                }
+                &.imagen2, &.imagen3{
+                    @media only screen and (min-width: 600px){
+                        &.img-sm{
+                            display: none;
+                        }
+                        &.img-md{
+                            display: unset;
+                        }
+                    }
+                    @media only screen and (min-width: 800px){
+                        &.img-md{
+                            display: none;
+                        }
+                        &.img-lg{
+                            display: unset;
+                        }
+                    }
+                    @media only screen and (min-width: 1024px){
+                        &.img-lg{
+                            display: none;
+                        }
+                        &.img-xl{
+                            display: unset;
+                        }
+                    }
                 }
             }
             .siguiente{

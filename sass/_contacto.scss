@@ -1,14 +1,17 @@
 /******** CONTACTO ********/
 .contacto{
+    h2{
+        @extend %font-h1;
+    }
     form{
+        margin-bottom: $margenSecciones;
         fieldset{
+            @include card(unset);
             display: grid;
             grid-template-columns: 5rem 1fr;
             grid-template-rows: repeat(6,auto);
             font-weight: $fuenteGeneralBold;
             padding: 1rem;
-            border: 0px;
-            box-shadow: $boxShadow;
             gap: 0.5rem;
             .nombre{
                 grid-column: 1;
@@ -48,16 +51,22 @@
             }
         }
     }
-    .instagram{
-        display: flex;
-        align-items: center;
-        div{
-            p{
-                margin: 0rem;
+    .redes{
+        justify-content: space-between;
+        margin-bottom: $margenSecciones;
+        .instagram, .youtube{
+            display: flex;
+            align-items: center;
+            margin-bottom: $margenParrafos;
+            div{
+                p{
+                    margin: 0px;
+                    padding-left: 1rem;
+                }
             }
-        }
-        .media{
-            font-size: $tamanoIconoMedia;
+            .media{
+                font-size: $tamanoIconoMedia;
+            }
         }
     }
     iframe{
@@ -78,11 +87,12 @@
         form{
             grid-area: formulario;
         }
-        .instagram{
+        .redes{
             grid-area: escribenos;
         }
         iframe{
             grid-area: mapa;
+            height: 100%;
         }
     }
 }

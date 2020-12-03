@@ -32,6 +32,7 @@ p{
     font-size: $tamanoTextoBase;
     margin-bottom: $margenParrafos;
     margin-top: $margenParrafos;
+    color: $colorTexto;
 }
 
 h1, h2, h3 {
@@ -39,29 +40,28 @@ h1, h2, h3 {
     margin-bottom: $margenTitulos;
 }
 
-/*
-h1, h2{
+
+h1, h2, h3{
     font-family: $fuenteTitulos;
 }
-*/
 
 /******** estilos generales utiles ********/
-h1, .font-h1{
-    font-size: $tamanoTextoBase + 1rem;
+h1, %font-h1{
+    font-size: $tamanoTextoBase + 1.2rem;
 }
-h2, .font-h2{
-    font-size: $tamanoTextoBase + 0.5rem;
+h2, %font-h2{
+    font-size: $tamanoTextoBase + 0.7rem;
 }
-h3, .font-h3{
+h3, %font-h3{
     font-size: $tamanoTextoBase + 0.17rem;
 }
-h4, .font-h4{
+h4, %font-h4{
     font-size: $tamanoTextoBase;
 }
-h5, .font-h5{
+h5, %font-h5{
     font-size: $tamanoTextoBase - 0.17rem;
 }
-h6, .font-h6{
+h6, %font-h6{
     font-size: $tamanoTextoBase - 0.33rem;
 }
 
@@ -79,10 +79,25 @@ h6, .font-h6{
     font-style: italic;
 }
 
-.centrado{
+%centrado{
     text-align: center;
 }
 
-.encuadre{
+%encuadre{
     border: $encuadre;
+}
+
+@mixin card ($ancho, $link: false){
+    width: $ancho;
+    margin-bottom: $margenCard;
+    box-shadow: $boxShadow;
+    @if $link == true{
+        border: $bordeCards;
+        &:hover{
+            border: $bordeCardsHover;
+            transform: scale(1.05);
+        }
+    } @else{
+        border: 0px;
+    }
 }

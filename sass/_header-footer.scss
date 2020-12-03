@@ -8,34 +8,28 @@ header{
     top: 0px;
     background-color: #000000;
     z-index: 16; /*ESTE NUMERO ES ASI PORQUE LOS INDICADORES DE BOOSTRAP TIENEN Z-INDEX 15*/
+    nav{
+        display: flex;
+        text-transform: uppercase;
+        font-size: $tamanoTextoBase;
+        align-items: center;
+        justify-content: space-between;
+        ul{
+            align-items: center;
+            li{
+                margin-left: $margenLinksNav;
+                transition: transform 0.1s;
+                a{
+                    color: #ffffff;
+                    font-weight: $fuenteGeneralBold;
+                }
+                &:hover{
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
 }
-
-header a{
-    color: #ffffff;
-    font-weight: $fuenteGeneralBold;
-}
-
-nav{
-    display: flex;
-    text-transform: uppercase;
-    font-size: $tamanoTextoBase;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav ul{
-    align-items: center;
-}
-
-nav li{
-    margin-left: $margenLinksNav;
-    transition: transform 0.1s;
-}
-
-nav li:hover{
-    transform: scale(1.15);
-}
-
 
 /******** FOOTER ********/
 /*-------tengo que corregir que no esta "pegado" al fondo de la pagina------*/
@@ -45,29 +39,21 @@ footer{
     font-weight: $fuenteGeneralRegular;
     font-size: $tamanoTextoFooter;
     margin-top: $margenSecciones;
-}
-
-footer .media{
-    font-size: $tamanoIconoMedia;
-    background-color: $colorSecundario;
-    color: $colorPrincipal;
-    display: none;
-}
-
-footer .media:hover{
-    color: $colorHoverLinks;
-}
-
-footer div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/******** ESTILOS PARA DESKTOP (O TABLETS GRANDES EN HORIZONTAL) ********/
-@media only screen and (min-width: 1024px){
-    /******** FOOTER ********/
-    footer .media{
-        display: inline-block;
+    .media{
+        font-size: $tamanoIconoMedia;
+        background-color: $colorSecundario;
+        color: $colorPrincipal;
+        display: none;
+        &:hover{
+            color: $colorHoverLinks;
+        }
+        @media only screen and (min-width: 1024px){
+            display: inline-block;
+        }
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }

@@ -4,28 +4,38 @@
     margin-bottom: $margenSecciones;
     justify-content: space-around;
     margin-bottom: $margenTitulos;
+    h2{
+        @extend %font-h1;
+    }
+    &.noticias-encuadre{
+        @extend %encuadre;
+    }
+    .noticias_titulo{
+        &.noticias_titulo-centrado{
+            @extend %centrado;
+        }
+    }
+    .noticias_parrafo{
+        &.noticias_parrafo-centrado{
+            @extend %centrado;
+        }
+    }
 
     li{
-        border: $bordeNoticas;
-        margin-right: 0rem;
-        margin-bottom: $margenNoticias;
-        width: 100%;
-        box-shadow: $boxShadow;
+        @include card(100%, true);
         transition: transform 0.2s;
         h3{
             margin: 0px;
+            font-family: $fuenteGeneral;
+            padding: 1rem;
         }
-        img, .noticias h3{
+        img, h3{
             width: 100%;
-        }
-        &:hover{
-            border: $bordeNoticasHover;
-            transform: scale(1.05);
         }
         /******** ESTILOS PARA TABLETS ********/
         @media only screen and (min-width: 600px){
             width: 40%;
-            margin: $margenNoticias;/*chequear si existe otra propiedad*/
+            margin: $margenNoticias;
         }
         /******** ESTILOS PARA DESKTOP (O TABLETS GRANDES EN HORIZONTAL) ********/
         @media only screen and (min-width: 1024px){
@@ -44,3 +54,4 @@
         }
     }
 }
+
