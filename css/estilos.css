@@ -122,9 +122,6 @@ header div .menu {
 header div a {
   color: #ffffff;
 }
-header div nav {
-  display: none;
-}
 header div nav .close {
   font-size: 1.5rem;
 }
@@ -152,66 +149,74 @@ header div nav .nav li a {
 header div nav .nav li:hover {
   transform: scale(1.15);
 }
-header div nav:target {
-  padding-left: 1.5rem;
-  padding-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  width: 70%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: #000;
+@media only screen and (max-width: 600px) {
+  header div nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000;
+    transition: left 0.5s;
+  }
+  header div nav .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header div nav .nav li {
+    margin-bottom: 2rem;
+    margin-left: 0;
+    transition: transform 0.1s;
+  }
+  header div nav .nav li a {
+    font-weight: 700;
+  }
+  header div nav .nav li:hover {
+    transform: scale(1.15);
+  }
+  header div nav .redes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  header div nav .redes .instagram, header div nav .redes .youtube {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+  }
+  header div nav .redes .instagram p, header div nav .redes .youtube p {
+    color: #ffffff;
+    margin: 0px;
+    padding-right: 1rem;
+    font-size: 0.75rem;
+    display: none;
+  }
 }
-header div nav:target .nav {
-  flex-direction: column;
-  align-items: flex-start;
-}
-header div nav:target .nav li {
-  margin-bottom: 2rem;
-  margin-left: 0;
-  transition: transform 0.1s;
-}
-header div nav:target .nav li a {
-  font-weight: 700;
-}
-header div nav:target .nav li:hover {
-  transform: scale(1.15);
-}
-header div nav:target .redes {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-header div nav:target .redes .instagram, header div nav:target .redes .youtube {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.7rem;
-}
-header div nav:target .redes .instagram p, header div nav:target .redes .youtube p {
-  color: #ffffff;
-  margin: 0px;
-  padding-right: 1rem;
-  font-size: 0.75rem;
-  display: none;
-}
-@media only screen and (min-width: 300px) {
-  header div nav:target .redes .instagram p, header div nav:target .redes .youtube p {
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+  header div nav .redes .instagram p, header div nav .redes .youtube p {
     display: block;
   }
 }
-header div nav:target .redes .instagram .media, header div nav:target .redes .youtube .media {
-  font-size: 2rem;
-  padding-right: 1rem;
+@media only screen and (max-width: 600px) {
+  header div nav .redes .instagram .media, header div nav .redes .youtube .media {
+    font-size: 2rem;
+    padding-right: 1rem;
+  }
 }
-header div nav:target .close {
-  display: block;
+@media only screen and (max-width: 600px) {
+  header div nav .close {
+    display: inline;
+    width: fit-content;
+  }
 }
-@media only screen and (min-width: 600px) {
-  header div nav {
-    display: inline-block;
+@media only screen and (max-width: 600px) {
+  header div nav#menu:target {
+    left: 0;
   }
 }
 
