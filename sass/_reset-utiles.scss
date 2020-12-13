@@ -47,22 +47,22 @@ h1, h2, h3{
 
 /******** estilos generales utiles ********/
 h1, %font-h1{
-    font-size: $tamanoTextoBase + 1.2rem;
+    font-size: 2.2 * $tamanoTextoBase;
 }
 h2, %font-h2{
-    font-size: $tamanoTextoBase + 0.7rem;
+    font-size: 1.7 * $tamanoTextoBase;
 }
 h3, %font-h3{
-    font-size: $tamanoTextoBase + 0.17rem;
+    font-size: 1.20 * $tamanoTextoBase;
 }
 h4, %font-h4{
     font-size: $tamanoTextoBase;
 }
 h5, %font-h5{
-    font-size: $tamanoTextoBase - 0.17rem;
+    font-size: 0.85 * $tamanoTextoBase;
 }
 h6, %font-h6{
-    font-size: $tamanoTextoBase - 0.33rem;
+    font-size: 0.67 * $tamanoTextoBase;
 }
 
 .no-display{

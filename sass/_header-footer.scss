@@ -8,27 +8,108 @@ header{
     top: 0px;
     background-color: #000000;
     z-index: 16; /*ESTE NUMERO ES ASI PORQUE LOS INDICADORES DE BOOSTRAP TIENEN Z-INDEX 15*/
-    nav{
+    div{
         display: flex;
-        text-transform: uppercase;
         font-size: $tamanoTextoBase;
         align-items: center;
         justify-content: space-between;
-        ul{
-            align-items: center;
-            li{
-                margin-left: $margenLinksNav;
-                transition: transform 0.1s;
-                a{
-                    color: #ffffff;
-                    font-weight: $fuenteGeneralBold;
+        .menu{
+            font-size: 1.5rem;
+            @media only screen and (min-width: 600px){
+                display: none;
+            }
+        }
+        a{
+            color: #ffffff;
+        }
+        nav{
+            display: none;
+            .close{
+                font-size: 1.5rem;
+                @media only screen and (min-width: 600px){
+                    display: none;
                 }
-                &:hover{
-                    transform: scale(1.15);
+            }
+            .redes{
+                @media only screen and (min-width: 600px){
+                    display: none;
                 }
+            }
+            .nav{
+                align-items: center;
+                li{
+                    margin-left: $margenLinksNav;
+                    transition: transform 0.1s;
+                    text-transform: uppercase;
+                    a{
+                        font-weight: $fuenteGeneralBold;
+                    }
+                    &:hover{
+                        transform: scale(1.15);
+                    }
+                }
+            }
+            &:target{
+                padding-left: 1.5rem;
+                padding-top: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: fixed;
+                width: 70%;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                background-color: $colorPrincipal;
+                .nav{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    li{
+                        margin-bottom: 2rem;
+                        margin-left: 0;
+                        transition: transform 0.1s;
+                        a{
+                            font-weight: $fuenteGeneralBold;
+                        }
+                        &:hover{
+                            transform: scale(1.15);
+                        }
+                    }
+                }
+                .redes{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: $margenSecciones;
+                    .instagram, .youtube{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: $margenParrafos;
+                        p{
+                            color: #ffffff;
+                            margin: 0px;
+                            padding-right: 1rem;
+                            font-size: 0.75rem;
+                            display: none;
+                            @media only screen and (min-width: 300px){
+                                display: block;
+                            }
+                        }
+                        .media{
+                            font-size: $tamanoIconoSiguenos;
+                            padding-right: 1rem;
+                        }
+                    }
+                }
+                .close{
+                    display: block;
+                }
+            }
+            @media only screen and (min-width: 600px){
+                display: inline-block;
             }
         }
     }
+    
 }
 
 /******** FOOTER ********/

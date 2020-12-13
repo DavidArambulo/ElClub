@@ -31,7 +31,7 @@ li {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 0.7rem;
   margin-top: 0.7rem;
   color: #000;
@@ -48,27 +48,27 @@ h1, h2, h3 {
 
 /******** estilos generales utiles ********/
 h1, .contacto h2, .estudio h2, .staff h2, .noticias h2, .recientes h2 {
-  font-size: 2.4rem;
+  font-size: 2.42rem;
 }
 
 h2, .estudio h3, .staff h3 {
-  font-size: 1.9rem;
+  font-size: 1.87rem;
 }
 
 h3, .staff ul .article div h4 {
-  font-size: 1.37rem;
+  font-size: 1.32rem;
 }
 
 h4, .staff ul .article div h5, .staff ul .article div h6 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 h5 {
-  font-size: 1.03rem;
+  font-size: 0.935rem;
 }
 
 h6 {
-  font-size: 0.87rem;
+  font-size: 0.737rem;
 }
 
 .no-display {
@@ -105,26 +105,114 @@ header {
   z-index: 16;
   /*ESTE NUMERO ES ASI PORQUE LOS INDICADORES DE BOOSTRAP TIENEN Z-INDEX 15*/
 }
-header nav {
+header div {
   display: flex;
-  text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   align-items: center;
   justify-content: space-between;
 }
-header nav ul {
+header div .menu {
+  font-size: 1.5rem;
+}
+@media only screen and (min-width: 600px) {
+  header div .menu {
+    display: none;
+  }
+}
+header div a {
+  color: #ffffff;
+}
+header div nav {
+  display: none;
+}
+header div nav .close {
+  font-size: 1.5rem;
+}
+@media only screen and (min-width: 600px) {
+  header div nav .close {
+    display: none;
+  }
+}
+@media only screen and (min-width: 600px) {
+  header div nav .redes {
+    display: none;
+  }
+}
+header div nav .nav {
   align-items: center;
 }
-header nav ul li {
+header div nav .nav li {
   margin-left: 0.75rem;
   transition: transform 0.1s;
+  text-transform: uppercase;
 }
-header nav ul li a {
-  color: #ffffff;
+header div nav .nav li a {
   font-weight: 700;
 }
-header nav ul li:hover {
+header div nav .nav li:hover {
   transform: scale(1.15);
+}
+header div nav:target {
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  width: 70%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+header div nav:target .nav {
+  flex-direction: column;
+  align-items: flex-start;
+}
+header div nav:target .nav li {
+  margin-bottom: 2rem;
+  margin-left: 0;
+  transition: transform 0.1s;
+}
+header div nav:target .nav li a {
+  font-weight: 700;
+}
+header div nav:target .nav li:hover {
+  transform: scale(1.15);
+}
+header div nav:target .redes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+header div nav:target .redes .instagram, header div nav:target .redes .youtube {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+header div nav:target .redes .instagram p, header div nav:target .redes .youtube p {
+  color: #ffffff;
+  margin: 0px;
+  padding-right: 1rem;
+  font-size: 0.75rem;
+  display: none;
+}
+@media only screen and (min-width: 300px) {
+  header div nav:target .redes .instagram p, header div nav:target .redes .youtube p {
+    display: block;
+  }
+}
+header div nav:target .redes .instagram .media, header div nav:target .redes .youtube .media {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+header div nav:target .close {
+  display: block;
+}
+@media only screen and (min-width: 600px) {
+  header div nav {
+    display: inline-block;
+  }
 }
 
 /******** FOOTER ********/
@@ -133,7 +221,7 @@ footer {
   background-color: #fff;
   color: #000;
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   margin-top: 2rem;
 }
 footer .media {
@@ -290,7 +378,7 @@ footer div {
   display: inline-block;
 }
 .staff ul .article .instagram i {
-  font-size: 4rem;
+  font-size: 3.5rem;
   background-color: transparent;
 }
 @media only screen and (min-width: 1078px) {
