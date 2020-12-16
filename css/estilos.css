@@ -446,49 +446,6 @@ footer div {
 .estudio article .imagen1 img, .estudio article .imagen2 img, .estudio article .imagen3 img, .estudio article .imagen4 img {
   width: 100%;
 }
-.estudio article .imagen1 img.img-md, .estudio article .imagen1 img.img-lg, .estudio article .imagen2 img.img-md, .estudio article .imagen2 img.img-lg, .estudio article .imagen3 img.img-md, .estudio article .imagen3 img.img-lg, .estudio article .imagen4 img.img-md, .estudio article .imagen4 img.img-lg {
-  display: none;
-}
-@media only screen and (min-width: 600px) {
-  .estudio article .imagen1 img.img-sm {
-    display: none;
-  }
-  .estudio article .imagen1 img.img-md {
-    display: unset;
-  }
-}
-@media only screen and (min-width: 900px) {
-  .estudio article .imagen1 img.img-md {
-    display: none;
-  }
-  .estudio article .imagen1 img.img-lg {
-    display: unset;
-  }
-}
-@media only screen and (min-width: 600px) {
-  .estudio article .imagen2 img.img-sm, .estudio article .imagen3 img.img-sm, .estudio article .imagen4 img.img-sm {
-    display: none;
-  }
-  .estudio article .imagen2 img.img-md, .estudio article .imagen3 img.img-md, .estudio article .imagen4 img.img-md {
-    display: unset;
-  }
-}
-@media only screen and (min-width: 800px) {
-  .estudio article .imagen2 img.img-md, .estudio article .imagen3 img.img-md, .estudio article .imagen4 img.img-md {
-    display: none;
-  }
-  .estudio article .imagen2 img.img-lg, .estudio article .imagen3 img.img-lg, .estudio article .imagen4 img.img-lg {
-    display: unset;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .estudio article .imagen2 img.img-lg, .estudio article .imagen3 img.img-lg, .estudio article .imagen4 img.img-lg {
-    display: none;
-  }
-  .estudio article .imagen2 img.img-sm, .estudio article .imagen3 img.img-sm, .estudio article .imagen4 img.img-sm {
-    display: unset;
-  }
-}
 @media only screen and (min-width: 1024px) {
   .estudio article {
     display: grid;
@@ -552,51 +509,8 @@ footer div {
   margin: auto;
   width: 100%;
 }
-.modal-estudio .modal img.img-md, .modal-estudio .modal img.img-lg, .modal-estudio .modal img.img-xl {
-  display: none;
-}
 .modal-estudio .modal img.imagen4 {
   max-width: 500px;
-}
-@media only screen and (min-width: 600px) {
-  .modal-estudio .modal img.imagen1.img-sm {
-    display: none;
-  }
-  .modal-estudio .modal img.imagen1.img-md {
-    display: unset;
-  }
-}
-@media only screen and (min-width: 900px) {
-  .modal-estudio .modal img.imagen1.img-md {
-    display: none;
-  }
-  .modal-estudio .modal img.imagen1.img-lg {
-    display: unset;
-  }
-}
-@media only screen and (min-width: 600px) {
-  .modal-estudio .modal img.imagen2.img-sm, .modal-estudio .modal img.imagen3.img-sm {
-    display: none;
-  }
-  .modal-estudio .modal img.imagen2.img-md, .modal-estudio .modal img.imagen3.img-md {
-    display: unset;
-  }
-}
-@media only screen and (min-width: 800px) {
-  .modal-estudio .modal img.imagen2.img-md, .modal-estudio .modal img.imagen3.img-md {
-    display: none;
-  }
-  .modal-estudio .modal img.imagen2.img-lg, .modal-estudio .modal img.imagen3.img-lg {
-    display: unset;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .modal-estudio .modal img.imagen2.img-lg, .modal-estudio .modal img.imagen3.img-lg {
-    display: none;
-  }
-  .modal-estudio .modal img.imagen2.img-xl, .modal-estudio .modal img.imagen3.img-xl {
-    display: unset;
-  }
 }
 .modal-estudio .modal .siguiente {
   grid-area: siguiente;
