@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Galada&family=Montserrat:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+/******** RESET ********/
 * {
   margin: 0%;
   padding: 0%;
@@ -46,7 +47,6 @@ h1, h2, h3 {
   font-family: "Galada", cursive;
 }
 
-/******** estilos generales utiles ********/
 h1, .contacto h2, .estudio h2, .staff h2, .noticias h2, .recientes h2 {
   font-size: 2.42rem;
 }
@@ -71,6 +71,8 @@ h6 {
   font-size: 0.737rem;
 }
 
+/******** FIN DE RESET ********/
+/******** ESTILOS GENERALES UTILES ********/
 .no-display {
   display: unset;
 }
@@ -93,11 +95,14 @@ h6 {
   border: #000 0.2rem solid;
 }
 
-/******** HEADER ********/
+/******** FIN DE ESTILOS GENERALES UTILES ********/
+/******** ESTILOS DEL LOGO ********/
 .logo {
   width: 5rem;
 }
 
+/******** FIN DE ESTILOS DEL LOGO ********/
+/******** HEADER ********/
 header {
   position: sticky;
   top: 0px;
@@ -110,6 +115,8 @@ header div {
   font-size: 1.1rem;
   align-items: center;
   justify-content: space-between;
+  /******** ESTILOS DEL ICONO DE MENU ********/
+  /******** ESTILOS DE LA NAVEGACION ********/
 }
 header div .menu {
   font-size: 1.5rem;
@@ -122,16 +129,14 @@ header div .menu {
 header div a {
   color: #ffffff;
 }
+header div nav {
+  /******** ESTILOS DEL NAV PARA MOBILE ********/
+}
 header div nav .close {
   font-size: 1.5rem;
 }
 @media only screen and (min-width: 600px) {
   header div nav .close {
-    display: none;
-  }
-}
-@media only screen and (min-width: 600px) {
-  header div nav .redes {
     display: none;
   }
 }
@@ -149,6 +154,11 @@ header div nav .nav li a {
 header div nav .nav li:hover {
   transform: scale(1.15);
 }
+@media only screen and (min-width: 600px) {
+  header div nav .redes {
+    display: none;
+  }
+}
 @media only screen and (max-width: 600px) {
   header div nav {
     position: fixed;
@@ -163,6 +173,7 @@ header div nav .nav li:hover {
     justify-content: space-between;
     background-color: #000;
     transition: left 0.5s;
+    /******** ESTILOS PARA REDES ********/
   }
   header div nav .nav {
     flex-direction: column;
@@ -178,6 +189,13 @@ header div nav .nav li:hover {
   }
   header div nav .nav li:hover {
     transform: scale(1.15);
+  }
+  header div nav#menu:target {
+    left: 0;
+  }
+  header div nav .close {
+    display: inline;
+    width: fit-content;
   }
   header div nav .redes {
     display: flex;
@@ -208,26 +226,21 @@ header div nav .nav li:hover {
     padding-right: 1rem;
   }
 }
-@media only screen and (max-width: 600px) {
-  header div nav .close {
-    display: inline;
-    width: fit-content;
-  }
-}
-@media only screen and (max-width: 600px) {
-  header div nav#menu:target {
-    left: 0;
-  }
-}
 
+/******** FIN DEL HEADER ********/
 /******** FOOTER ********/
-/*-------tengo que corregir que no esta "pegado" al fondo de la pagina------*/
 footer {
   background-color: #fff;
   color: #000;
   font-weight: 400;
   font-size: 0.7rem;
   margin-top: 2rem;
+  /******** ESTILOS DE ICONOS DE REDES ********/
+}
+footer div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 footer .media {
   font-size: 3rem;
@@ -243,13 +256,10 @@ footer .media:hover {
     display: inline-block;
   }
 }
-footer div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
+/******** FIN DEL FOOTER ********/
 /******** HOME ********/
+/******** ESTILOS DE ADAPTACION DEL CARUSEL DE BOOTSTRAP ********/
 .carousel {
   max-width: 1200px;
   margin: auto;
@@ -267,13 +277,91 @@ footer div {
   width: 100%;
 }
 
+/******** ESTILOS PARA EL CLUB EN CASA ********/
+.en-casa {
+  background-color: #bd6dff;
+  color: #ffffff;
+}
+.en-casa .container {
+  padding: 1.5rem 0;
+}
+.en-casa .container h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.en-casa .container .info p {
+  color: #ffffff;
+}
+.en-casa .container img {
+  width: 100%;
+}
+@media only screen and (min-width: 600px) {
+  .en-casa .container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: auto auto;
+    grid-template-areas: "titulo img" "texto img";
+    gap: 1rem;
+  }
+  .en-casa .container h2 {
+    grid-area: titulo;
+  }
+  .en-casa .container .info {
+    grid-area: texto;
+  }
+  .en-casa .container img {
+    grid-area: img;
+    margin: auto;
+  }
+}
+
+/******** ESTILOS PARA ESCENA EL CLUB ********/
+.escena-el-club article {
+  padding: 1.5rem 0;
+}
+.escena-el-club article img {
+  width: 100%;
+}
+@media only screen and (min-width: 600px) and (max-width: 1199px) {
+  .escena-el-club article {
+    display: grid;
+    grid-template-columns: auto 250px;
+    grid-template-rows: auto auto;
+    grid-template-areas: "titulo img" "texto img";
+    gap: 1rem;
+  }
+  .escena-el-club article h2 {
+    grid-area: titulo;
+  }
+  .escena-el-club article .info {
+    grid-area: texto;
+  }
+  .escena-el-club article img {
+    grid-area: img;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .escena-el-club {
+    display: flex;
+    justify-content: space-between;
+  }
+  .escena-el-club article {
+    width: 48%;
+  }
+}
+
+/******** FIN DE HOME ********/
 /******** NOTICIAS ********/
+/*Los estilos aqui se aplican tambien a las noticias
+recientes presentes en la pagina de HOME*/
 .noticias, .recientes {
-  /*Chequear sacar el margen para los titulos de las noticias*/
   margin-top: 2rem;
   margin-bottom: 2rem;
   justify-content: space-around;
   margin-bottom: 1rem;
+  /******** ESTILOS PARA LAS CARDS DE NOTICIAS ********/
+  /******** ESTILOS ESPECIFICOS PARA NOTICIAS RECIENTES ********/
 }
 .noticias li, .recientes li {
   width: 100%;
@@ -281,8 +369,6 @@ footer div {
   box-shadow: 0.4rem 0.25rem 1rem rgba(0, 0, 0, 0.3);
   border: 0.02rem solid transparent;
   transition: transform 0.2s;
-  /******** ESTILOS PARA TABLETS ********/
-  /******** ESTILOS PARA DESKTOP (O TABLETS GRANDES EN HORIZONTAL) ********/
 }
 .noticias li:hover, .recientes li:hover {
   border: 0.02rem solid #bd6dff;
@@ -313,7 +399,6 @@ footer div {
 }
 .noticias .recientes .noticia4, .recientes .recientes .noticia4 {
   display: none;
-  /******** ESTILOS PARA TABLETS ********/
 }
 @media only screen and (min-width: 600px) {
   .noticias .recientes .noticia4, .recientes .recientes .noticia4 {
@@ -321,7 +406,11 @@ footer div {
   }
 }
 
+/******** FIN DE NOTICIAS ********/
 /******** STAFF ********/
+.staff {
+  /******** ESTILOS PARA LAS CARDS DEL STAFF ********/
+}
 .staff ul {
   flex-direction: column;
 }
@@ -334,6 +423,9 @@ footer div {
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto auto;
   grid-template-areas: "img img" "data nada" "data insta";
+  /******** ESTILOS DE LAS IMAGENES ********/
+  /******** ESTILOS DE LOS DATOS DE LAS CARDS ********/
+  /******** ESTILOS DEL ICONO DE INSTAGRAM ********/
 }
 .staff ul .article img {
   width: 100%;
@@ -420,6 +512,7 @@ footer div {
   }
 }
 
+/******** ANIMACIONES ********/
 @keyframes agitar {
   25% {
     transform: rotate(45deg);
@@ -428,7 +521,11 @@ footer div {
     transform: rotate(-45deg);
   }
 }
+/******** FIN DE STAFF ********/
 /******** ESTUDIO ********/
+.estudio {
+  /******** ESTILOS PARA LAS GALERIAS DE LAS SALAS ********/
+}
 .estudio video {
   width: 100%;
 }
@@ -452,6 +549,9 @@ footer div {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "titulo titulo" "imagen1 imagen1" "imagen2 imagen4" "imagen3 imagen4";
+    /*Lo siguiente es utilizado para mostrar
+    de diferente manera la disposicion de las
+    imagenes*/
   }
   .estudio article h3 {
     grid-area: titulo;
@@ -474,6 +574,7 @@ footer div {
   }
 }
 
+/******** ESTILOS PARA LOS MODALES ********/
 .modal-estudio {
   position: fixed;
   top: 0;
@@ -483,6 +584,7 @@ footer div {
   background-color: rgba(0, 0, 0, 0.85);
   display: none;
   z-index: 17;
+  /******** DISPOSICION DE LOS ELEMENTOS ********/
 }
 .modal-estudio .modal {
   width: 100%;
@@ -516,6 +618,7 @@ footer div {
   grid-area: siguiente;
 }
 
+/******** ESTILOS PARA MOSTRAR LOS MODALES ********/
 #sala1-imagen1:target, #sala1-imagen2:target, #sala1-imagen3:target, #sala1-imagen4:target,
 #sala2-imagen1:target, #sala2-imagen2:target, #sala2-imagen3:target, #sala2-imagen4:target,
 #sala3-imagen1:target, #sala3-imagen2:target, #sala3-imagen3:target, #sala3-imagen4:target,
@@ -525,7 +628,14 @@ footer div {
   align-items: center;
 }
 
+/******** FIN DE ESTUDIO ********/
 /******** CONTACTO ********/
+.contacto {
+  /******** ESTILOS DEL FORMULARIO ********/
+  /******** ESTILOS PARA REDES ********/
+  /******** ESTILOS DEL MAPA DE UBICACION ********/
+  /******** ESTILOS PARA DESKTOPS ********/
+}
 .contacto form {
   margin-bottom: 2rem;
 }
@@ -623,6 +733,7 @@ footer div {
   }
 }
 
+/******** FIN CONTACTO ********/
 /******** SIGUENOS ********/
 .siguenos {
   position: fixed;
@@ -639,6 +750,8 @@ footer div {
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   z-index: 1;
+  /******** ESTILOS DE LOS ICONOS ********/
+  /******** ESTILOS DEL TEXTO ********/
   /******** ESTILOS PARA TABLETS ********/
 }
 .siguenos ul {
@@ -670,6 +783,10 @@ footer div {
   }
 }
 
+/******** ANIMACION DE INICIO ********/
+/*La animacion funciona como una lengueta,
+se expande para mostrar todo su contenido
+luego se contrae dejando solo visibles los iconos*/
 @keyframes seguinos {
   0% {
     transform: translateX(160px);
@@ -684,3 +801,4 @@ footer div {
     transform: translateX(160px);
   }
 }
+/******** FIN SIGUENOS ********/

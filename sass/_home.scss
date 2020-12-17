@@ -16,4 +16,82 @@
         }
     }
 }
+
+/******** ESTILOS PARA EL CLUB EN CASA ********/
+.en-casa{
+    background-color: $colorHoverLinks;
+    color: #ffffff;
+    .container{
+        padding: 1.5rem 0;
+        h2{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .info{
+            p{
+                color: #ffffff;
+            }
+        }
+        img{
+            width: 100%;
+        }
+        @media only screen and (min-width: 600px){
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+                "titulo img"
+                "texto img";
+            gap: 1rem;
+            h2{
+                grid-area: titulo;
+            }
+            .info{
+                grid-area: texto;
+            }
+            img{
+                grid-area: img;
+                margin: auto;
+            }
+        }
+    }
+}
+
+/******** ESTILOS PARA ESCENA EL CLUB ********/
+.escena-el-club{
+    article{
+        padding: 1.5rem 0;
+        img{
+            width: 100%;
+        }
+    }
+    @media only screen and (min-width: 600px) and (max-width: 1199px){
+        article{
+            display: grid;
+            grid-template-columns: auto 250px;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+                "titulo img"
+                "texto img";
+            gap: 1rem;
+            h2{
+                grid-area: titulo;
+            }
+            .info{
+                grid-area: texto;
+            }
+            img{
+                grid-area: img;
+                margin: auto;
+            }
+        }
+    }
+    @media only screen and (min-width: 1200px){
+        display: flex;
+        justify-content: space-between;
+        article{
+            width: 48%;
+        }
+    }
+}
 /******** FIN DE HOME ********/
