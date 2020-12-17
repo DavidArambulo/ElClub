@@ -651,6 +651,12 @@ recientes presentes en la pagina de HOME*/
   padding: 1rem;
   gap: 0.5rem;
 }
+.contacto form fieldset input, .contacto form fieldset textarea, .contacto form fieldset select {
+  border-radius: 0;
+  border: none;
+  padding: 5px;
+  box-shadow: 0rem 0rem 0.25rem rgba(0, 0, 0, 0.3);
+}
 .contacto form fieldset .nombre {
   grid-column: 1;
 }
