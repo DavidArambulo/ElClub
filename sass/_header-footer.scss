@@ -1,8 +1,10 @@
-/******** HEADER ********/
+/******** ESTILOS DEL LOGO ********/
 .logo{
     width: 5rem;
 }
+/******** FIN DE ESTILOS DEL LOGO ********/
 
+/******** HEADER ********/
 header{
     position: sticky;
     top: 0px;
@@ -13,23 +15,20 @@ header{
         font-size: $tamanoTextoBase;
         align-items: center;
         justify-content: space-between;
+        /******** ESTILOS DEL ICONO DE MENU ********/
         .menu{
             font-size: 1.5rem;
             @media only screen and (min-width: 600px){
                 display: none;
             }
         }
+        /******** ESTILOS DE LA NAVEGACION ********/
         a{
             color: #ffffff;
         }
         nav{
             .close{
                 font-size: 1.5rem;
-                @media only screen and (min-width: 600px){
-                    display: none;
-                }
-            }
-            .redes{
                 @media only screen and (min-width: 600px){
                     display: none;
                 }
@@ -48,6 +47,13 @@ header{
                     }
                 }
             }
+            .redes{
+                @media only screen and (min-width: 600px){
+                    display: none;
+                }
+            }
+
+            /******** ESTILOS DEL NAV PARA MOBILE ********/
             @media only screen and (max-width: 600px){
                 position: fixed;
                 top: 0;
@@ -76,6 +82,14 @@ header{
                         }
                     }
                 }
+                &#menu:target{
+                    left: 0;
+                }
+                .close{
+                    display: inline;
+                    width: fit-content;
+                }
+                /******** ESTILOS PARA REDES ********/
                 .redes{
                     display: flex;
                     justify-content: space-between;
@@ -100,27 +114,25 @@ header{
                         }
                     }
                 }
-                .close{
-                    display: inline;
-                    width: fit-content;
-                }
-                &#menu:target{
-                    left: 0;
-                }
             }
         }
     }
-    
 }
+/******** FIN DEL HEADER ********/
 
 /******** FOOTER ********/
-/*-------tengo que corregir que no esta "pegado" al fondo de la pagina------*/
 footer{
     background-color: $colorBase;
     color: $colorPrincipal;
     font-weight: $fuenteGeneralRegular;
     font-size: $tamanoTextoFooter;
     margin-top: $margenSecciones;
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /******** ESTILOS DE ICONOS DE REDES ********/
     .media{
         font-size: $tamanoIconoMedia;
         background-color: $colorSecundario;
@@ -133,9 +145,5 @@ footer{
             display: inline-block;
         }
     }
-    div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 }
+/******** FIN DEL FOOTER ********/

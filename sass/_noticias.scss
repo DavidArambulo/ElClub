@@ -1,5 +1,7 @@
 /******** NOTICIAS ********/
-.noticias, .recientes {/*Chequear sacar el margen para los titulos de las noticias*/
+/*Los estilos aqui se aplican tambien a las noticias
+recientes presentes en la pagina de HOME*/
+.noticias, .recientes {
     margin-top: $margenSecciones;
     margin-bottom: $margenSecciones;
     justify-content: space-around;
@@ -21,6 +23,7 @@
         }
     }
 
+    /******** ESTILOS PARA LAS CARDS DE NOTICIAS ********/
     li{
         @include card(100%, true);
         transition: transform 0.2s;
@@ -32,22 +35,20 @@
         img, h3{
             width: 100%;
         }
-        /******** ESTILOS PARA TABLETS ********/
         @media only screen and (min-width: 600px){
             width: 40%;
             margin: $margenNoticias;
         }
-        /******** ESTILOS PARA DESKTOP (O TABLETS GRANDES EN HORIZONTAL) ********/
         @media only screen and (min-width: 1024px){
             width: 20%;
         }
     }
+    /******** ESTILOS ESPECIFICOS PARA NOTICIAS RECIENTES ********/
     .recientes{
         justify-content: space-around;
         margin-bottom: $margenTitulos;
         .noticia4{
             display: none;
-            /******** ESTILOS PARA TABLETS ********/
             @media only screen and (min-width: 600px){
                 display: unset;
             }
@@ -55,3 +56,4 @@
     }
 }
 
+/******** FIN DE NOTICIAS ********/

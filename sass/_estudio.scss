@@ -13,6 +13,8 @@
     h3{
         @extend %font-h2;
     }
+
+    /******** ESTILOS PARA LAS GALERIAS DE LAS SALAS ********/
     article{
         margin-bottom: $margenArticulo;
         gap: 0.5rem;
@@ -47,6 +49,9 @@
                 grid-area: imagen4;
                 margin: auto;
             }
+            /*Lo siguiente es utilizado para mostrar
+            de diferente manera la disposicion de las
+            imagenes*/
             &.invertido{
                 grid-template-areas: 
                 "titulo titulo"
@@ -58,6 +63,7 @@
     }
 }
 
+/******** ESTILOS PARA LOS MODALES ********/
 .modal-estudio{
     position: fixed;
     top: 0;
@@ -67,6 +73,7 @@
     background-color: $colorFondoModal;
     display: none;
     z-index: 17;
+    /******** DISPOSICION DE LOS ELEMENTOS ********/
     .modal{
         width: 100%;
         display: grid;
@@ -101,7 +108,7 @@
             }
     }
 }
-
+/******** ESTILOS PARA MOSTRAR LOS MODALES ********/
 #sala1-imagen1:target, #sala1-imagen2:target, #sala1-imagen3:target, #sala1-imagen4:target,
 #sala2-imagen1:target, #sala2-imagen2:target, #sala2-imagen3:target, #sala2-imagen4:target,
 #sala3-imagen1:target, #sala3-imagen2:target, #sala3-imagen3:target, #sala3-imagen4:target,
@@ -110,3 +117,5 @@
     justify-content: center;
     align-items: center;
 }
+
+/******** FIN DE ESTUDIO ********/

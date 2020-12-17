@@ -3,6 +3,7 @@
     h2{
         @extend %font-h1;
     }
+    /******** ESTILOS DEL FORMULARIO ********/
     form{
         margin-bottom: $margenSecciones;
         fieldset{
@@ -51,6 +52,7 @@
             }
         }
     }
+    /******** ESTILOS PARA REDES ********/
     .redes{
         justify-content: space-between;
         margin-bottom: $margenSecciones;
@@ -69,9 +71,11 @@
             }
         }
     }
+    /******** ESTILOS DEL MAPA DE UBICACION ********/
     iframe{
         width: 100%;
     }
+    /******** ESTILOS PARA DESKTOPS ********/
     @media only screen and (min-width: 1024px){
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -96,3 +100,4 @@
         }
     }
 }
+/******** FIN CONTACTO ********/
