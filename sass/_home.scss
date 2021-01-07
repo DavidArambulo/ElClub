@@ -17,10 +17,15 @@
     }
 }
 
+/******** ESTILOS PARA SOBRE EL CLUB ********/
+.el-club{
+    margin-bottom: $margenSecciones;
+}
+
 /******** ESTILOS PARA EL CLUB EN CASA ********/
 .en-casa{
     background-color: $colorHoverLinks;
-    color: #ffffff;
+    color: $colorSecundario;
     .container{
         padding: 1.5rem 0;
         h2{
@@ -29,7 +34,16 @@
         }
         .info{
             p{
-                color: #ffffff;
+                color: $colorSecundario;
+            }
+            margin-bottom: 1.2rem;
+            a{
+                color: $colorHoverLinks;
+                background-color: $colorSecundario;
+                &:hover{
+                    text-decoration: underline;
+                    
+                }
             }
         }
         img{
@@ -61,6 +75,15 @@
 .escena-el-club{
     article{
         padding: 1.5rem 0;
+        .info{
+            margin-bottom: 1.2rem;
+            a{
+                color: $colorHoverLinks;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
         img{
             width: 100%;
         }

@@ -10,16 +10,16 @@ body {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.005rem;
   word-spacing: 0.1rem;
-  color: #000;
+  color: #1f1f1f;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #1f1f1f;
 }
 
 a:hover {
-  color: #bd6dff;
+  color: #d1b5e5;
 }
 
 ul {
@@ -35,15 +35,16 @@ p {
   font-size: 1.1rem;
   margin-bottom: 0.7rem;
   margin-top: 0.7rem;
-  color: #000;
+  color: #1f1f1f;
+}
+
+span {
+  font-family: "Galada", cursive;
 }
 
 h1, h2, h3 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-h1, h2, h3 {
   font-family: "Galada", cursive;
 }
 
@@ -63,14 +64,6 @@ h4, .staff ul .article div h5, .staff ul .article div h6 {
   font-size: 1.1rem;
 }
 
-h5 {
-  font-size: 0.935rem;
-}
-
-h6 {
-  font-size: 0.737rem;
-}
-
 /******** FIN DE RESET ********/
 /******** ESTILOS GENERALES UTILES ********/
 .no-display {
@@ -83,16 +76,12 @@ h6 {
   margin: auto;
 }
 
-.italic {
-  font-style: italic;
-}
-
 .noticias .noticias_parrafo.noticias_parrafo-centrado, .recientes .noticias_parrafo.noticias_parrafo-centrado, .noticias .noticias_titulo.noticias_titulo-centrado, .recientes .noticias_titulo.noticias_titulo-centrado {
   text-align: center;
 }
 
 .noticias.noticias-encuadre, .recientes.noticias-encuadre {
-  border: #000 0.2rem solid;
+  border: #1b1c1e 0.2rem solid;
 }
 
 /******** FIN DE ESTILOS GENERALES UTILES ********/
@@ -106,7 +95,7 @@ h6 {
 header {
   position: sticky;
   top: 0px;
-  background-color: #000000;
+  background-color: #1b1c1e;
   z-index: 16;
   /*ESTE NUMERO ES ASI PORQUE LOS INDICADORES DE BOOSTRAP TIENEN Z-INDEX 15*/
 }
@@ -127,7 +116,7 @@ header div .menu {
   }
 }
 header div a {
-  color: #ffffff;
+  color: #fff;
 }
 header div nav {
   /******** ESTILOS DEL NAV PARA MOBILE ********/
@@ -159,7 +148,7 @@ header div nav .nav li:hover {
     display: none;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   header div nav {
     position: fixed;
     top: 0;
@@ -171,7 +160,7 @@ header div nav .nav li:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #000;
+    background-color: #1b1c1e;
     transition: left 0.5s;
     /******** ESTILOS PARA REDES ********/
   }
@@ -182,13 +171,6 @@ header div nav .nav li:hover {
   header div nav .nav li {
     margin-bottom: 2rem;
     margin-left: 0;
-    transition: transform 0.1s;
-  }
-  header div nav .nav li a {
-    font-weight: 700;
-  }
-  header div nav .nav li:hover {
-    transform: scale(1.15);
   }
   header div nav#menu:target {
     left: 0;
@@ -208,19 +190,19 @@ header div nav .nav li:hover {
     margin-bottom: 0.7rem;
   }
   header div nav .redes .instagram p, header div nav .redes .youtube p {
-    color: #ffffff;
+    color: inherit;
     margin: 0px;
     padding-right: 1rem;
     font-size: 0.75rem;
     display: none;
   }
 }
-@media only screen and (max-width: 600px) and (min-width: 300px) {
+@media only screen and (max-width: 599px) and (min-width: 300px) {
   header div nav .redes .instagram p, header div nav .redes .youtube p {
     display: block;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   header div nav .redes .instagram .media, header div nav .redes .youtube .media {
     font-size: 2rem;
     padding-right: 1rem;
@@ -231,7 +213,7 @@ header div nav .nav li:hover {
 /******** FOOTER ********/
 footer {
   background-color: #fff;
-  color: #000;
+  color: #1b1c1e;
   font-weight: 400;
   font-size: 0.7rem;
   margin-top: 2rem;
@@ -241,15 +223,38 @@ footer div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /******** ESTILOS DEL COPYRIGHT ********/
+}
+footer div.copyright {
+  background-color: #1b1c1e;
+  color: #fff;
+  padding: 0.25rem 0;
+}
+footer div.copyright ul {
+  width: 100%;
+  justify-content: space-between;
+}
+footer div.copyright ul li a {
+  color: #fff;
+}
+footer div.copyright ul li a:hover {
+  color: #d1b5e5;
+  text-decoration: underline;
+}
+@media only screen and (max-width: 300px) {
+  footer div.copyright ul li.github {
+    display: none;
+  }
 }
 footer .media {
   font-size: 3rem;
   background-color: #fff;
-  color: #000;
+  color: #1b1c1e;
   display: none;
+  margin-left: 0.25rem;
 }
 footer .media:hover {
-  color: #bd6dff;
+  color: #d1b5e5;
 }
 @media only screen and (min-width: 1024px) {
   footer .media {
@@ -277,10 +282,15 @@ footer .media:hover {
   width: 100%;
 }
 
+/******** ESTILOS PARA SOBRE EL CLUB ********/
+.el-club {
+  margin-bottom: 2rem;
+}
+
 /******** ESTILOS PARA EL CLUB EN CASA ********/
 .en-casa {
-  background-color: #bd6dff;
-  color: #ffffff;
+  background-color: #d1b5e5;
+  color: #fff;
 }
 .en-casa .container {
   padding: 1.5rem 0;
@@ -289,8 +299,18 @@ footer .media:hover {
   margin-top: 0;
   margin-bottom: 0;
 }
+.en-casa .container .info {
+  margin-bottom: 1.2rem;
+}
 .en-casa .container .info p {
-  color: #ffffff;
+  color: #fff;
+}
+.en-casa .container .info a {
+  color: #d1b5e5;
+  background-color: #fff;
+}
+.en-casa .container .info a:hover {
+  text-decoration: underline;
 }
 .en-casa .container img {
   width: 100%;
@@ -318,6 +338,15 @@ footer .media:hover {
 /******** ESTILOS PARA ESCENA EL CLUB ********/
 .escena-el-club article {
   padding: 1.5rem 0;
+}
+.escena-el-club article .info {
+  margin-bottom: 1.2rem;
+}
+.escena-el-club article .info a {
+  color: #d1b5e5;
+}
+.escena-el-club article .info a:hover {
+  text-decoration: underline;
 }
 .escena-el-club article img {
   width: 100%;
@@ -371,7 +400,7 @@ recientes presentes en la pagina de HOME*/
   transition: transform 0.2s;
 }
 .noticias li:hover, .recientes li:hover {
-  border: 0.02rem solid #bd6dff;
+  border: 0.02rem solid #d1b5e5;
   transform: scale(1.05);
 }
 .noticias li h3, .recientes li h3 {
@@ -473,6 +502,8 @@ recientes presentes en la pagina de HOME*/
 .staff ul .article .instagram {
   grid-area: insta;
   display: inline-block;
+  margin-bottom: 0.25rem;
+  margin-right: 0.25rem;
 }
 .staff ul .article .instagram i {
   font-size: 3.5rem;
@@ -709,6 +740,7 @@ recientes presentes en la pagina de HOME*/
 .contacto .redes .instagram div p, .contacto .redes .youtube div p {
   margin: 0px;
   padding-left: 1rem;
+  color: inherit;
 }
 .contacto .redes .instagram .media, .contacto .redes .youtube .media {
   font-size: 3rem;
@@ -746,14 +778,14 @@ recientes presentes en la pagina de HOME*/
   bottom: 8rem;
   right: 0rem;
   width: 200px;
-  background-color: #000;
+  background-color: #1b1c1e;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   display: flex;
   align-items: center;
-  transform: translateX(160px);
+  transform: translateX(156px);
   animation-name: seguinos;
-  animation-duration: 2s;
+  animation-duration: 2.5s;
   animation-timing-function: ease-in-out;
   z-index: 1;
   /******** ESTILOS DE LOS ICONOS ********/
@@ -774,7 +806,7 @@ recientes presentes en la pagina de HOME*/
   color: #fff;
 }
 .siguenos ul li a:hover {
-  color: #bd6dff;
+  color: #d1b5e5;
 }
 .siguenos p {
   text-transform: uppercase;
@@ -795,16 +827,19 @@ se expande para mostrar todo su contenido
 luego se contrae dejando solo visibles los iconos*/
 @keyframes seguinos {
   0% {
-    transform: translateX(160px);
+    transform: translateX(200px);
   }
-  35% {
+  20% {
+    transform: translateX(200px);
+  }
+  55% {
     transform: translateX(0px);
   }
-  65% {
+  75% {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(160px);
+    transform: translateX(156px);
   }
 }
 /******** FIN SIGUENOS ********/

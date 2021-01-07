@@ -36,13 +36,13 @@ p{
     color: $colorTexto;
 }
 
+span{
+    font-family: $fuenteTitulos;
+}
+
 h1, h2, h3 {
     margin-top: $margenTitulos;
     margin-bottom: $margenTitulos;
-}
-
-
-h1, h2, h3{
     font-family: $fuenteTitulos;
 }
 
@@ -58,12 +58,6 @@ h3, %font-h3{
 h4, %font-h4{
     font-size: $tamanoTextoBase;
 }
-h5, %font-h5{
-    font-size: 0.85 * $tamanoTextoBase;
-}
-h6, %font-h6{
-    font-size: 0.67 * $tamanoTextoBase;
-}
 /******** FIN DE RESET ********/
 
 /******** ESTILOS GENERALES UTILES ********/
@@ -75,10 +69,6 @@ h6, %font-h6{
     width: 90%;
     max-width: 1200px;
     margin: auto;
-}
-
-.italic{
-    font-style: italic;
 }
 
 %centrado{

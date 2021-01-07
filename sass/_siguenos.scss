@@ -9,9 +9,9 @@
     border-bottom-left-radius: 1rem;
     display: flex;
     align-items: center;
-    transform: translateX(160px);
+    transform: translateX(156px);
     animation-name: seguinos;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-timing-function: ease-in-out;
     z-index: 1;
 
@@ -54,16 +54,19 @@ se expande para mostrar todo su contenido
 luego se contrae dejando solo visibles los iconos*/
 @keyframes seguinos{
     0%{
-        transform: translateX(160px);
+        transform: translateX(200px);
     }
-    35%{
+    20%{
+        transform: translateX(200px);// Se realiza esto para que le de tiempo a los iconos para que se cargen
+    }
+    55%{
         transform: translateX(0px);
     }
-    65%{
+    75%{
         transform: translateX(0px);
     }
     100%{
-        transform: translateX(160px);
+        transform: translateX(156px);
     }
 }
 /******** FIN SIGUENOS ********/
