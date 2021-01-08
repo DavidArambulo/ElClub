@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #d1b5e5;
+  color: #bd6dff;
 }
 
 ul {
@@ -239,7 +239,7 @@ footer div.copyright ul li a {
   color: #fff;
 }
 footer div.copyright ul li a:hover {
-  color: #d1b5e5;
+  color: #bd6dff;
   text-decoration: underline;
 }
 @media only screen and (max-width: 300px) {
@@ -255,7 +255,7 @@ footer .media {
   margin-left: 0.25rem;
 }
 footer .media:hover {
-  color: #d1b5e5;
+  color: #bd6dff;
 }
 @media only screen and (min-width: 1024px) {
   footer .media {
@@ -290,7 +290,7 @@ footer .media:hover {
 
 /******** ESTILOS PARA EL CLUB EN CASA ********/
 .en-casa {
-  background-color: #d1b5e5;
+  background-color: #bd6dff;
   color: #fff;
 }
 .en-casa .container {
@@ -307,7 +307,7 @@ footer .media:hover {
   color: #fff;
 }
 .en-casa .container .info a {
-  color: #d1b5e5;
+  color: #bd6dff;
   background-color: #fff;
 }
 .en-casa .container .info a:hover {
@@ -344,7 +344,7 @@ footer .media:hover {
   margin-bottom: 1.2rem;
 }
 .escena-el-club article .info a {
-  color: #d1b5e5;
+  color: #bd6dff;
 }
 .escena-el-club article .info a:hover {
   text-decoration: underline;
@@ -401,7 +401,7 @@ recientes presentes en la pagina de HOME*/
   transition: transform 0.2s;
 }
 .noticias li:hover, .recientes li:hover {
-  border: 0.02rem solid #d1b5e5;
+  border: 0.02rem solid #bd6dff;
   transform: scale(1.05);
 }
 .noticias li h3, .recientes li h3 {
@@ -810,7 +810,7 @@ recientes presentes en la pagina de HOME*/
   color: #fff;
 }
 .siguenos ul li a:hover {
-  color: #d1b5e5;
+  color: #bd6dff;
 }
 .siguenos p {
   text-transform: uppercase;
