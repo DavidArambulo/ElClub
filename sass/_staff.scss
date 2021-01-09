@@ -6,6 +6,9 @@
     h3{
         @extend %font-h2;
     }
+    .aclaracion{
+        font-size: $tamanoTextoFooter;
+    }
     /******** ESTILOS PARA LAS CARDS DEL STAFF ********/
     ul{
         flex-direction: column;

@@ -1,8 +1,13 @@
 /******** ESTUDIO ********/
 .estudio{
-    video {
-        width: 100%;
+    .video{
+        display: flex;
+        justify-content: center;
+        video{
+            width: 75%;
+        }
     }
+    
     h2, h3 {
         margin-top: 2rem;
         margin-bottom: 0.5rem;

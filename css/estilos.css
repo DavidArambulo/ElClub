@@ -83,7 +83,7 @@ h4, .staff ul .article div h5, .staff ul .article div h6 {
 /******** FIN DE ESTILOS GENERALES UTILES ********/
 /******** ESTILOS DEL LOGO ********/
 .logo {
-  width: 5rem;
+  width: 4rem;
 }
 
 /******** FIN DE ESTILOS DEL LOGO ********/
@@ -211,7 +211,7 @@ footer {
   background-color: #fff;
   color: #1b1c1e;
   font-weight: 400;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   margin-top: 2rem;
   /******** ESTILOS DE ICONOS DE REDES ********/
 }
@@ -437,6 +437,9 @@ recientes presentes en la pagina de HOME*/
 .staff {
   /******** ESTILOS PARA LAS CARDS DEL STAFF ********/
 }
+.staff .aclaracion {
+  font-size: 0.75rem;
+}
 .staff ul {
   flex-direction: column;
 }
@@ -554,8 +557,12 @@ recientes presentes en la pagina de HOME*/
 .estudio {
   /******** ESTILOS PARA LAS GALERIAS DE LAS SALAS ********/
 }
-.estudio video {
-  width: 100%;
+.estudio .video {
+  display: flex;
+  justify-content: center;
+}
+.estudio .video video {
+  width: 75%;
 }
 .estudio h2, .estudio h3 {
   margin-top: 2rem;
