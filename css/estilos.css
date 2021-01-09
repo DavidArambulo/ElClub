@@ -374,6 +374,13 @@ footer .media:hover {
   }
   .escena-el-club article {
     width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .escena-el-club article img {
+    margin-bottom: 0;
+    margin-top: auto;
   }
 }
 

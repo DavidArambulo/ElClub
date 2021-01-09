@@ -114,6 +114,13 @@
         justify-content: space-between;
         article{
             width: 48%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            img{
+                margin-bottom: 0;
+                margin-top: auto;
+            }
         }
     }
 }
