@@ -1,6 +1,6 @@
-# ElClub
+# El Club
 PARA VER LA PAGINA PUEDES ENTRAR EN:
-https://davidarambulo.github.io/ElClub/
+https://el-club.vercel.app/
 
 ## SEO aplicado
 ### Home:
@@ -22,3 +22,8 @@ https://davidarambulo.github.io/ElClub/
 ### Contacto:
 * __Descripcion:__ ¡Contactanos! Aprende hip-hop, contemporaneo, clasico, wacking con los mejores profesores y coreografos en modalidad virtual o presencial.
 * __Keywords:__ EL CLUB, CONTACTO, INSTAGRAM, BAILE, COREOGRAFIA
+
+## Recursos de terceros
+* __Carrusel de imgenes:__ Bootstrap (https://getbootstrap.com/)
+* __Animaciones al hacer scroll:__ WOW.js (https://wowjs.uk/)
+* __Favicon:__ RealFaviconGenerator (https://realfavicongenerator.net/)
